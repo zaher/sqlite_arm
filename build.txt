@@ -1,0 +1,9 @@
+http://www.sqlite.org/cvstrac/wiki?p=HowToCompile
+
+gcc -c sqlite3.c -O2 -DNDEBUG=1 -DTHREADSAFE=1
+gcc -shared -s -o sqlite3.dll *.o
+
+evc4 add
+NO_TCL,SQLITE_ENABLE_COLUMN_METADATA,SQLITE_ENABLE_RTREE
+for WINCE4
+SQLITE_OMIT_WAL
